@@ -8,6 +8,8 @@ include("Version")
 include_directories(${CMAKE_BINARY_DIR}/bin)
 
 find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+message(STATUS "opencv = ${OpenCV_VERSION}")
 
 find_package(TBB REQUIRED)
 include_directories(${TBB_INCLUDE_DIR})

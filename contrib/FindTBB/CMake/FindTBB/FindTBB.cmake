@@ -52,7 +52,6 @@
 # TBB_DEBUG_LIBRARIES, the libraries to link against to use TBB with debug symbols.
 # TBB_FOUND, If false, don't try to use TBB.
 # TBB_INTERFACE_VERSION, as defined in tbb/tbb_stddef.h
-MESSAGE("Loaded FindTBB")
 
 if (WIN32)
     # has em64t/vc8 em64t/vc9

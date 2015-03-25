@@ -15,7 +15,8 @@ public:
     FaceIsolator(std::string frontal_classifier_path, std::string profile_classifier_path);
     virtual ~FaceIsolator();
     
-     FindFaceReturn find_face(const std::string& path);
+    FindFaceReturn find_face(const std::string& path);
+    bool show_face(const std::string& path);
     
 private:
     class FaceIsolatorImpl;
