@@ -4,5 +4,5 @@ set (DATA_FILES
 )
 
 install(FILES ${DATA_FILES}
-    DESTINATION ${CMAKE_SOURCE_DIR}/dist/data
+    DESTINATION ${CMAKE_SOURCE_DIR}/dist/${RELEASE_PATH}/data
 )

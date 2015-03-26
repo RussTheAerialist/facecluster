@@ -5,5 +5,5 @@ set (SAMPLE_FILES
 )
 
 install(FILES ${SAMPLE_FILES}
-    DESTINATION ${CMAKE_SOURCE_DIR}/dist/samples
+    DESTINATION ${CMAKE_SOURCE_DIR}/dist/${RELEASE_PATH}/samples
 )

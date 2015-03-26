@@ -34,5 +34,5 @@ target_link_libraries( face_isolator
 )
 
 install(TARGETS face_isolator
-    DESTINATION ${CMAKE_SOURCE_DIR}/dist
+    DESTINATION ${CMAKE_SOURCE_DIR}/dist/${RELEASE_PATH}
 )

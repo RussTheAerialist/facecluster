@@ -15,8 +15,8 @@ add_library(aboutface_common SHARED
 )
 
 install(TARGETS aboutface_common
-    DESTINATION ${CMAKE_SOURCE_DIR}/dist
+    DESTINATION ${CMAKE_SOURCE_DIR}/dist/${RELEASE_PATH}
 )
 install(FILES ${common_HEADERS}
-    DESTINATION ${CMAKE_SOURCE_DIR}/dist/include
+    DESTINATION ${CMAKE_SOURCE_DIR}/dist/${RELEASE_PATH}/include
 )

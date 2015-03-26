@@ -6,6 +6,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
     "${CMAKE_SOURCE_DIR}/CMake/"
 )
 include("Version")
+set(RELEASE_PATH "about:face-${project_VERSION}")
 include_directories(${CMAKE_BINARY_DIR}/bin)
 
 find_package(OpenCV REQUIRED)

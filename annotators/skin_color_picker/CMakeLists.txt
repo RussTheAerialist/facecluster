@@ -29,5 +29,5 @@ target_link_libraries( skin_color_picker
 )
 
 install(TARGETS skin_color_picker
-    DESTINATION ${CMAKE_SOURCE_DIR}/dist
+    DESTINATION ${CMAKE_SOURCE_DIR}/dist/${RELEASE_PATH}
 )
