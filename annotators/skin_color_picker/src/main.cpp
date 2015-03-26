@@ -9,13 +9,14 @@
 #include "rectangle.h"
 #include "skin_hue_averager.h"
 
-// 84,120+346x346 1.jpg
+// ./skin_color_picker ../../../samples/1.jpg 84,120+346x346
+// ./skin_color_picker ../../../samples/2.jpg 349,144+395x395
+// ./skin_color_picker ../../../samples/3.jpg 154,164+246x246
 
 using namespace af::common;
 
 int run(const std::string& path, const Rectangle& faceBox, bool display )
 {
-    std::cout << "RECT:" << faceBox.toString() << std::endl;
     // Load Image
     cv::Mat original = cv::imread(path);
     
@@ -34,6 +35,7 @@ int run(const std::string& path, const Rectangle& faceBox, bool display )
     } else {
         average_hue = averager.average(face);
     }
+    
     // Skin Hue Discriminator
     
     // Output skin category
@@ -43,7 +45,9 @@ int run(const std::string& path, const Rectangle& faceBox, bool display )
         cv::waitKey();
     }
     
-    return -1;
+    std::cout << "Skin: " << average_hue << std::endl;
+    
+    return 0;
 }
 
 int main(int argc, char **argv)

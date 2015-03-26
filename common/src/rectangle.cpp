@@ -25,14 +25,11 @@ std::string af::common::Rectangle::toString() const
 
 af::common::Rectangle af::common::Rectangle::fromString(const std::string& str)
 {
-    std::cout << str << std::endl;
     std::smatch match;
     if (!std::regex_search(str, match, GEOMETRY_REGEX)) {
         std::cout << "Unable to match" << std::endl;
         return Rectangle();
     }
-    
-    std::cout << match.size() << std::endl;
     
     return Rectangle(
                      std::stoi(match[X].str()),
