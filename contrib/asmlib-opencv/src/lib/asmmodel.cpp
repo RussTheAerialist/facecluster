@@ -344,7 +344,7 @@ ASMFitResult ASMModel::fit(const cv::Mat& img, int verbose)
 void ASMModel::loadFromFile(ModelFile& file)
 {
     ShapeModel::loadFromFile(file);
-    printf("Loading ASM model from file...\n");
+//    printf("Loading ASM model from file...\n");
 
     file.readInt(localFeatureRad);
     file.readInt(ns);

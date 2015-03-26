@@ -14,7 +14,7 @@ ShapeModel::ShapeModel()
 
 void ShapeModel::loadShapeInfo(const char* shapeFileName)
 {
-    printf("Loading shape info from %s\n", shapeFileName);
+//    printf("Loading shape info from %s\n", shapeFileName);
 
     AFReader shapeDefFile(shapeFileName);
     FILE *fp = shapeDefFile.FH();
@@ -269,7 +269,7 @@ void ShapeModel::saveToFile(ModelFile &file)
 
 void ShapeModel::loadFromFile(ModelFile &file)
 {
-    printf("Loading Shape model from file...\n");
+//    printf("Loading Shape model from file...\n");
     file.readInt(pyramidLevel);
     file.readInt(nMarkPoints);
     file.readInt(nTrain);

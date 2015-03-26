@@ -1,4 +1,8 @@
 build
+build-*
 .svn
 make
 dist
+tmp
+asmlib-build
+asmlib-stamp

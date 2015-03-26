@@ -28,6 +28,7 @@ add_executable( face_isolator
     ${face_isolator_SRC}
 )
 
+add_dependencies(face_isolator aboutface_common)
 target_link_libraries( face_isolator
     aboutface_common
     ${OpenCV_LIBS}

@@ -24,6 +24,13 @@ add_definitions(-std=c++11)
 add_subdirectory(common)
 include_directories(${CMAKE_SOURCE_DIR}/common/include)
 
+LINK_DIRECTORIES(
+    ${CMAKE_BINARY_DIR}/bin
+    ${TBB_LIBRARY_DIRS}
+)
+
+add_subdirectory(contrib)
+set(ASM_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/contrib/asmlib-opencv/src/lib)
 add_subdirectory(annotators)
 add_subdirectory(data)
 add_subdirectory(samples)
