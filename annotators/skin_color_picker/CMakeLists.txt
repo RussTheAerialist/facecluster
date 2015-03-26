@@ -1,8 +1,10 @@
 set(skin_color_picker_SRC
     src/main.cpp
+    src/skin_hue_averager.cpp
 )
 
 set(skin_color_picker_HEADERS
+    include/skin_hue_averager.h
 )
 
 INCLUDE_DIRECTORIES(
