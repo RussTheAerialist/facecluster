@@ -4,6 +4,7 @@ set(common_SRC
 
 set(common_HEADERS
     include/rectangle.h
+    include/opencv_adapters.h
 )
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
