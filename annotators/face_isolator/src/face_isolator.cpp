@@ -1,18 +1,14 @@
 #include "rectangle.h"
 #include "face_isolator.h"
+#include "opencv_adapters.h"
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/objdetect/objdetect.hpp>
 
-using FindFaceReturn = std::pair<bool, Rectangle>;
-const FindFaceReturn FailedFindFace = FindFaceReturn(false, Rectangle());
-
-Rectangle makeRectangle(cv::Rect_<int>& in_rect)
-{
-    return Rectangle(in_rect.x, in_rect.y, in_rect.width, in_rect.height);
-}
+using FindFaceReturn = std::pair<bool, af::common::Rectangle>;
+const FindFaceReturn FailedFindFace = FindFaceReturn(false, af::common::Rectangle());
 
 class FaceIsolator::FaceIsolatorImpl {
 public:
@@ -49,7 +45,7 @@ public:
             return false;
         }
         
-        cv::rectangle(original, cv::Rect_<int>(face.second.x, face.second.y, face.second.width, face.second.height), CV_RGB(0, 255, 0), 1);
+        cv::rectangle(original, af::adapters::makeCvRect(face.second), CV_RGB(0, 255, 0), 1);
         cv::imshow("Face Isolator", original);
         cv::waitKey();
         
@@ -73,7 +69,7 @@ private:
             return FailedFindFace;
         }
         
-        return FindFaceReturn(true, makeRectangle(faces[0]));
+        return FindFaceReturn(true, af::adapters::makeRectangle(faces[0]));
     }
     
     cv::CascadeClassifier frontal_classifier;
