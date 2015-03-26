@@ -32,3 +32,7 @@ target_link_libraries( face_isolator
     aboutface_common
     ${OpenCV_LIBS}
 )
+
+install(TARGETS face_isolator
+    DESTINATION ${CMAKE_SOURCE_DIR}/dist
+)

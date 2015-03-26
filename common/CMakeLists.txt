@@ -13,3 +13,10 @@ add_library(aboutface_common SHARED
     ${common_SRC}
     ${common_HEADERS}
 )
+
+install(TARGETS aboutface_common
+    DESTINATION ${CMAKE_SOURCE_DIR}/dist
+)
+install(FILES ${common_HEADERS}
+    DESTINATION ${CMAKE_SOURCE_DIR}/dist/include
+)

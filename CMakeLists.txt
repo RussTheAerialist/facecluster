@@ -24,3 +24,5 @@ add_subdirectory(common)
 include_directories(${CMAKE_SOURCE_DIR}/common/include)
 
 add_subdirectory(annotators)
+add_subdirectory(data)
+add_subdirectory(samples)

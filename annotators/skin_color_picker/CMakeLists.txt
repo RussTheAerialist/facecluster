@@ -27,3 +27,7 @@ target_link_libraries( skin_color_picker
     aboutface_common
     ${OpenCV_LIBS}
 )
+
+install(TARGETS skin_color_picker
+    DESTINATION ${CMAKE_SOURCE_DIR}/dist
+)
